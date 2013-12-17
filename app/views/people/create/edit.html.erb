@@ -1,0 +1,7 @@
+<h3>Edit Person</h3>
+<%= form_for(@person, url: person_create_url(@person.id)) do |f| %>
+  <%= render partial: @person.state, locals: { f: f } %>
+  <div>
+    <%= f.submit "Next" %>
+  </div>
+<% end  %>
