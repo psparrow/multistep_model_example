@@ -1,5 +1,5 @@
 class People::CreateController < ApplicationController
-  before_filter :load_person, only: [:edit, :update, :show]
+  before_filter :load_person, only: [:edit, :update]
 
   def new
     @person = Person.new
@@ -32,8 +32,6 @@ class People::CreateController < ApplicationController
       render :edit
     end
   end
-
-  def show; end
 
   private
 
